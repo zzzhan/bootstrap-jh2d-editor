@@ -1,0 +1,9 @@
+node_modules
+bower_components
+test*
+tmp
+/src
+/res
+.pk
+dist
+/*.html

@@ -1,0 +1,32 @@
+{
+  "name": "bootstrap-jh2d-editor",
+  "version": "0.1.0",
+  "authors": [
+    "zzzhan <chunzhan.he@gmail.com>"
+  ],
+  "description": "Online diagram software and flow chart software",
+  "main": [
+    "dist/js/jbootstrap-jh2d-editor.js",
+    "dist/css/bootstrap-jh2d-editor.css",
+    "dist/img/bootstrap-jh2d-editor.png"
+  ],
+  "keywords": [
+    "Online diagram software",
+    "Flow chart software"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zzzhan/bootstrap-jh2d-editor",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-shapestyle-dialog": "https://github.com/zzzhan/bootstrap-shapestyle-dialog.git",
+    "node-uuid": "~1.4.3",
+    "jh2d": "https://github.com/zzzhan/jh2d.git",
+    "jquery.hotkeys": "https://github.com/jeresig/jquery.hotkeys.git#~0.2.0"
+  }
+}
