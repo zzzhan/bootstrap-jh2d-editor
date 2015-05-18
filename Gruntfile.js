@@ -93,8 +93,9 @@ module.exports = function (grunt) {
           collapseWhitespace: true
         },
         files: {
-          'index.html': 'tmp/index.html',
-          'index_zh-cn.html': 'tmp/index_zh-cn.html'
+		  'index.html':'tmp/index.html',
+		  'zh-cn/index.html':'tmp/zh-cn/index.html',
+		  'zh-tw/index.html':'tmp/zh-tw/index.html'
         }
       }
     },
@@ -141,7 +142,22 @@ module.exports = function (grunt) {
           }
         },
         files: {
-          'tmp/index_zh-cn.html': ['src/lang/index.json', 'src/lang/index_zh-cn.json']
+          'tmp/zh-cn/index.html': ['src/lang/index.json', 'src/lang/index_zh-cn.json']
+        }
+      },
+      zh_tw: {
+        options: {
+          renderer: function(k, v) {
+            switch(k) {
+              case 'bootstrap-ssdlg':
+              v = grunt.file.read('bower_components/bootstrap-shapestyle-dialog/dist/tpl/bootstrap-ssdlg_zh_cn.min.html');
+              break;
+            }
+            return v;
+          }
+        },
+        files: {
+          'tmp/zh-tw/index.html': ['src/lang/index.json', 'src/lang/index_zh-tw.json']
         }
       }
     },
