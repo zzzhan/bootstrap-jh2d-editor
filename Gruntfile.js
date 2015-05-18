@@ -172,6 +172,7 @@ module.exports = function (grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.registerTask('test', ['jshint','dotpl','uglify','cssmin','concat:css','htmlmin']);
   grunt.registerTask('decrypt', ['cipher:decrypt']);
+  grunt.registerTask('encrypt', ['cipher:encrypt']);
   grunt.registerTask('default', ['jshint','clean','cipher:encrypt','uglify','cssmin','concat:css','imagemin']);
   grunt.registerTask('release', ['concat:allinone_css', 'concat:allinone_js', 'copy', 'dotpl', 'htmlmin']);
 };
