@@ -150,7 +150,7 @@ module.exports = function (grunt) {
           renderer: function(k, v) {
             switch(k) {
               case 'bootstrap-ssdlg':
-              v = grunt.file.read('bower_components/bootstrap-shapestyle-dialog/dist/tpl/bootstrap-ssdlg_zh_cn.min.html');
+              v = grunt.file.read('bower_components/bootstrap-shapestyle-dialog/dist/tpl/bootstrap-ssdlg_zh_tw.min.html');
               break;
             }
             return v;
