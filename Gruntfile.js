@@ -73,6 +73,12 @@ module.exports = function (grunt) {
         cwd: 'bower_components/mjolnic-bootstrap-colorpicker/dist/img/',
         src: ['**/*'],
         dest:'dist/img/'
+      },
+      bootstrap_jh2d_editor: {
+        expand: true,
+        cwd: 'src/img/',
+        src: ['**/*'],
+        dest:'dist/img/'
       }
     },
 	  cssmin: {
@@ -189,6 +195,6 @@ module.exports = function (grunt) {
   grunt.registerTask('test', ['jshint','dotpl','uglify','cssmin','concat:css','htmlmin']);
   grunt.registerTask('decrypt', ['cipher:decrypt']);
   grunt.registerTask('encrypt', ['cipher:encrypt']);
-  grunt.registerTask('default', ['jshint','clean','cipher:encrypt','uglify','cssmin','concat:css','imagemin']);
+  grunt.registerTask('default', ['jshint','clean','cipher:encrypt','uglify','cssmin','concat:css']);
   grunt.registerTask('release', ['concat:allinone_css', 'concat:allinone_js', 'copy', 'dotpl', 'htmlmin']);
 };
