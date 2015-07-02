@@ -73,6 +73,12 @@ module.exports = function (grunt) {
         cwd: 'bower_components/mjolnic-bootstrap-colorpicker/dist/img/',
         src: ['**/*'],
         dest:'dist/img/'
+      },
+      bootstrap_jh2d_editor: {
+        expand: true,
+        cwd: 'src/img/',
+        src: ['**/*'],
+        dest:'dist/img/'
       }
     },
 	  cssmin: {
@@ -93,9 +99,9 @@ module.exports = function (grunt) {
           collapseWhitespace: true
         },
         files: {
-          'index.html': 'tmp/index.html',
-          'index_zh-cn.html': 'tmp/index_zh-cn.html',
-          'index_zh-tw.html': 'tmp/index_zh-tw.html'
+		  'index.html':'tmp/index.html',
+		  'zh-cn/index.html':'tmp/zh-cn/index.html',
+		  'zh-tw/index.html':'tmp/zh-tw/index.html'
         }
       }
     },
@@ -142,7 +148,7 @@ module.exports = function (grunt) {
           }
         },
         files: {
-          'tmp/index_zh-cn.html': ['src/lang/index.json', 'src/lang/index_zh-cn.json']
+          'tmp/zh-cn/index.html': ['src/lang/index.json', 'src/lang/index_zh-cn.json']
         }
       },
       zh_tw: {
@@ -150,16 +156,16 @@ module.exports = function (grunt) {
           renderer: function(k, v) {
             switch(k) {
               case 'bootstrap-ssdlg':
-              v = grunt.file.read('bower_components/bootstrap-shapestyle-dialog/dist/tpl/bootstrap-ssdlg_zh_cn.min.html');
+              v = grunt.file.read('bower_components/bootstrap-shapestyle-dialog/dist/tpl/bootstrap-ssdlg_zh_tw.min.html');
               break;
             }
             return v;
           }
         },
         files: {
-          'tmp/index_zh-tw.html': ['src/lang/index.json', 'src/lang/index_zh-tw.json']
+          'tmp/zh-tw/index.html': ['src/lang/index.json', 'src/lang/index_zh-tw.json']
         }
-	  }
+      }
     },
     cipher: {
       options: {
@@ -188,6 +194,7 @@ module.exports = function (grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.registerTask('test', ['jshint','dotpl','uglify','cssmin','concat:css','htmlmin']);
   grunt.registerTask('decrypt', ['cipher:decrypt']);
-  grunt.registerTask('default', ['jshint','clean','cipher:encrypt','uglify','cssmin','concat:css','imagemin']);
+  grunt.registerTask('encrypt', ['cipher:encrypt']);
+  grunt.registerTask('default', ['jshint','clean','cipher:encrypt','uglify','cssmin','concat:css']);
   grunt.registerTask('release', ['concat:allinone_css', 'concat:allinone_js', 'copy', 'dotpl', 'htmlmin']);
 };
