@@ -21,6 +21,9 @@
     "require": true,
     "uuid":true,
     "jh2d":true,
-    "jQuery":true
+    "JSZip":true,
+    "saveAs":true,
+    "jQuery":true,
+    "unescape":true
   }
 }
