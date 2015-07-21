@@ -28,6 +28,7 @@
     "node-uuid": "~1.4.3",
     "jh2d": "https://github.com/zzzhan/jh2d.git",
     "jquery.hotkeys": "https://github.com/jeresig/jquery.hotkeys.git#~0.2.0",
-    "qrcode.js": "https://github.com/davidshimjs/qrcodejs.git"
+    "qrcode.js": "https://github.com/davidshimjs/qrcodejs.git",
+    "bootstrap-user-login": "https://github.com/zzzhan/bootstrap-user-login.git"
   }
 }
