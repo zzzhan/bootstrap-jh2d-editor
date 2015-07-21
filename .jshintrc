@@ -24,6 +24,8 @@
     "JSZip":true,
     "saveAs":true,
     "jQuery":true,
-    "unescape":true
+    "unescape":true,
+    "escape":true,
+    "QRCode":true
   }
 }

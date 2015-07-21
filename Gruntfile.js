@@ -50,6 +50,7 @@ module.exports = function (grunt) {
         src: [
           'bower_components/jquery.hotkeys/jquery.hotkeys.js',
           'bower_components/node-uuid/uuid.js',
+          'bower_components/qrcodejs/qrcode.min.js',
           'bower_components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js',
           'bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js',
           'bower_components/jquery-imagerect/dist/js/jquery-imagerect.min.js',
