@@ -129,12 +129,6 @@ module.exports = function (grunt) {
               case 'bootstrap-ssdlg':
               v = grunt.file.read('bower_components/bootstrap-shapestyle-dialog/dist/tpl/bootstrap-ssdlg.min.html');
               break;
-			  case 'bootstrap-login-dlg':
-			  v = grunt.file.read('bower_components/bootstrap-user-login/dist/login.min.html');
-			  break;
-			  case 'bootstrap-signup-dlg':
-			  v = grunt.file.read('bower_components/bootstrap-user-login/dist/signup.min.html');
-			  break;
             }
             return v;
           }
@@ -150,12 +144,6 @@ module.exports = function (grunt) {
               case 'bootstrap-ssdlg':
               v = grunt.file.read('bower_components/bootstrap-shapestyle-dialog/dist/tpl/bootstrap-ssdlg_zh_cn.min.html');
               break;
-			  case 'bootstrap-login-dlg':
-			  v = grunt.file.read('bower_components/bootstrap-user-login/dist/login_zh_cn.min.html');
-			  break;
-			  case 'bootstrap-signup-dlg':
-			  v = grunt.file.read('bower_components/bootstrap-user-login/dist/signup_zh_cn.min.html');
-			  break;
             }
             return v;
           }
@@ -171,12 +159,6 @@ module.exports = function (grunt) {
               case 'bootstrap-ssdlg':
               v = grunt.file.read('bower_components/bootstrap-shapestyle-dialog/dist/tpl/bootstrap-ssdlg_zh_tw.min.html');
               break;
-			  case 'bootstrap-login-dlg':
-			  v = grunt.file.read('bower_components/bootstrap-user-login/dist/login_zh_tw.min.html');
-			  break;
-			  case 'bootstrap-signup-dlg':
-			  v = grunt.file.read('bower_components/bootstrap-user-login/dist/signup_zh_tw.min.html');
-			  break;
             }
             return v;
           }
