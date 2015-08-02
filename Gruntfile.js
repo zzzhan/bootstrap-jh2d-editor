@@ -10,7 +10,8 @@ module.exports = function (grunt) {
       },
       build: {
 		    files: {
-			    'dist/js/<%= pkg.filename %>.min.js':'src/js/<%=pkg.filename %>.js'
+			    'dist/js/<%= pkg.filename %>.min.js':'src/js/<%=pkg.filename %>.js',
+			    'dist/js/user-message.min.js':'src/js/user-message.js'
 		    }
       }
     },
