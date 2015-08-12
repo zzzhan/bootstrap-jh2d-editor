@@ -26,6 +26,7 @@
     "jQuery":true,
     "unescape":true,
     "escape":true,
-    "QRCode":true
+    "QRCode":true,
+    "ZeroClipboard":true
   }
 }
