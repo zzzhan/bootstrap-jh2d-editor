@@ -101,9 +101,9 @@ module.exports = function (grunt) {
           collapseWhitespace: true
         },
         files: {
-		  'index.html':'tmp/index.html',
-		  'zh-cn/index.html':'tmp/zh-cn/index.html',
-		  'zh-tw/index.html':'tmp/zh-tw/index.html'
+		  'dist/index.html':'tmp/index.html',
+		  'dist/index_zh-CN.html':'tmp/zh-cn/index.html',
+		  'dist/index_zh-TW.html':'tmp/zh-tw/index.html'
         }
       }
     },
