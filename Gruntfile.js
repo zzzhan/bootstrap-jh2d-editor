@@ -100,11 +100,12 @@ module.exports = function (grunt) {
           removeComments: true,
           collapseWhitespace: true
         },
-        files: {
-		  'dist/index.html':'tmp/index.html',
-		  'dist/index_zh-CN.html':'tmp/zh-cn/index.html',
-		  'dist/index_zh-TW.html':'tmp/zh-tw/index.html'
-        }
+	    files: [{       
+          expand: true,
+		  cwd: 'tmp',
+		  src: '**/*.html',
+		  dest: 'dist'
+		}]
       }
     },
     imagemin: {
@@ -121,53 +122,33 @@ module.exports = function (grunt) {
     clean: ['dist','tmp'],
     dotpl: {
       options: {
-        tpl:'src/tpl/index.html'
+        main:'src/tpl/index.html'
       },
-      default_lang: {
-        options: {
-          renderer: function(k, v) {
-            switch(k) {
-              case 'bootstrap-ssdlg':
-              v = grunt.file.read('bower_components/bootstrap-shapestyle-dialog/dist/tpl/bootstrap-ssdlg.min.html');
-              break;
-            }
-            return v;
-          }
-        },
+	  main: {
+		options: {
+			renderer: function(k, v) {
+				if(k==='bootstrap_ssdlg') {
+				  var p = 'bower_components/bootstrap-shapestyle-dialog/dist/tpl/';
+				  var name = 'bootstrap-ssdlg.min.html';
+				  switch(this.ctx.dest) {
+				    case 'tmp/index_zh-CN.html':
+					  name = 'bootstrap-ssdlg_zh_cn.min.html';
+					break;
+				    case 'tmp/index_zh-TW.html':
+					  name = 'bootstrap-ssdlg_zh_tw.min.html';
+					break;
+				  }
+				  v = grunt.file.read(p+name);
+				}
+				return v;
+			}
+		},
         files: {
-          'tmp/index.html': ['src/lang/index.json']
+          'tmp/index.html': ['src/lang/en-US/main.json'],
+          'tmp/index_zh-CN.html': ['src/lang/en-CN/main.json'],
+          'tmp/index_zh-TW.html': ['src/lang/en-TW/main.json']
         }
-      },
-      zh_cn: {
-        options: {
-          renderer: function(k, v) {
-            switch(k) {
-              case 'bootstrap-ssdlg':
-              v = grunt.file.read('bower_components/bootstrap-shapestyle-dialog/dist/tpl/bootstrap-ssdlg_zh_cn.min.html');
-              break;
-            }
-            return v;
-          }
-        },
-        files: {
-          'tmp/zh-cn/index.html': ['src/lang/index.json', 'src/lang/index_zh-cn.json']
-        }
-      },
-      zh_tw: {
-        options: {
-          renderer: function(k, v) {
-            switch(k) {
-              case 'bootstrap-ssdlg':
-              v = grunt.file.read('bower_components/bootstrap-shapestyle-dialog/dist/tpl/bootstrap-ssdlg_zh_tw.min.html');
-              break;
-            }
-            return v;
-          }
-        },
-        files: {
-          'tmp/zh-tw/index.html': ['src/lang/index.json', 'src/lang/index_zh-tw.json']
-        }
-      }
+	  }
     },
     cipher: {
       options: {
