@@ -145,8 +145,8 @@ module.exports = function (grunt) {
 		},
         files: {
           'tmp/index.html': ['src/lang/en-US/main.json'],
-          'tmp/index_zh-CN.html': ['src/lang/en-CN/main.json'],
-          'tmp/index_zh-TW.html': ['src/lang/en-TW/main.json']
+          'tmp/index_zh-CN.html': ['src/lang/zh-CN/main.json'],
+          'tmp/index_zh-TW.html': ['src/lang/zh-TW/main.json']
         }
 	  }
     },
