@@ -3,7 +3,6 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     uglify: {
       options: {
-        banner: "/*! <%= pkg.filename %> <%= grunt.template.today('yyyy-mm-dd') %> */\n",
         mangle: {toplevel: true},
         squeeze: {dead_code: false},
         codegen: {quote_keys: true}
@@ -11,7 +10,9 @@ module.exports = function (grunt) {
       build: {
 		    files: {
 			    'dist/js/<%= pkg.filename %>.min.js':'src/js/<%=pkg.filename %>.js',
-			    'dist/js/user-message.min.js':'src/js/user-message.js'
+			    'dist/js/user-message.min.js':'src/js/user-message.js',
+				'tmp/js/jquery.hotkeys.min.js':'bower_components/jquery.hotkeys/jquery.hotkeys.js',
+				'tmp/js/uuid.min.js':'bower_components/node-uuid/uuid.js'
 		    }
       }
     },
@@ -49,14 +50,16 @@ module.exports = function (grunt) {
       },
       allinone_js:{
         src: [
-          'bower_components/jquery.hotkeys/jquery.hotkeys.js',
-          'bower_components/node-uuid/uuid.js',
+          'tmp/js/jquery.hotkeys.min.js',
+          'tmp/js/uuid.min.js',
           'bower_components/qrcodejs/qrcode.min.js',
           'bower_components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js',
           'bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js',
           'bower_components/jquery-imagerect/dist/js/jquery-imagerect.min.js',
           'bower_components/bootstrap-colorpicker-plus/dist/js/bootstrap-colorpicker-plus.min.js',
           'bower_components/bootstrap-shapestyle-dialog/dist/js/bootstrap-ssdlg.min.js',
+          'bower_components/jszip/dist/jszip.min.js',
+          'bower_components/file-saver/FileSaver.min.js',
           'bower_components/jh2d/dist/jh2d.min.js',
           'dist/js/bootstrap-jh2d-editor.min.js'
         ],
