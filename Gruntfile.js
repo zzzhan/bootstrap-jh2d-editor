@@ -61,7 +61,7 @@ module.exports = function (grunt) {
           'bower_components/jszip/dist/jszip.min.js',
           'bower_components/file-saver/FileSaver.min.js',
           'bower_components/jh2d/dist/jh2d.min.js',
-          'dist/js/bootstrap-jh2d-editor-min.js'
+          'src/js/bootstrap-jh2d-editor.js'
         ],
         dest: 'dist/js/allinone.min.js'
       }
