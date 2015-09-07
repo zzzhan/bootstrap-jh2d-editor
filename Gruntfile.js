@@ -52,14 +52,14 @@ module.exports = function (grunt) {
         src: [
           'tmp/js/jquery.hotkeys.min.js',
           'tmp/js/uuid.min.js',
-          'bower_components/qrcodejs/qrcode.min.js',
+          'bower_components/qrcode.js/qrcode.min.js',
           'bower_components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js',
           'bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js',
           'bower_components/jquery-imagerect/dist/js/jquery-imagerect.min.js',
           'bower_components/bootstrap-colorpicker-plus/dist/js/bootstrap-colorpicker-plus.min.js',
           'bower_components/bootstrap-shapestyle-dialog/dist/js/bootstrap-ssdlg.min.js',
           'bower_components/jszip/dist/jszip.min.js',
-          'bower_components/file-saver/FileSaver.min.js',
+          'bower_components/file-saver.js/FileSaver.js',
           'bower_components/jh2d/dist/jh2d.min.js',
           'src/js/bootstrap-jh2d-editor.js'
         ],
