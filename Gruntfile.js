@@ -40,7 +40,7 @@ module.exports = function (grunt) {
         src: [
           'bower_components/bootstrap-dropdown-submenu/dist/css/bootstrap-dropdown-submenu.min.css',
           'bower_components/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css',
-          'bower_components/bootstrap-colorpicker-plus/dist/css/bootstrap-colorpicker-plus.min.css',
+          'bower_components/bootstrap-colorpicker-plus/dist/css/bootstrap-colorpicker-plus.css',
           'bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css',
           'bower_components/bootstrap-shapestyle-dialog/dist/css/bootstrap-ssdlg.min.css',
           'bower_components/jquery-imagerect/dist/css/jquery-imagerect.min.css',
@@ -56,7 +56,7 @@ module.exports = function (grunt) {
           'bower_components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js',
           'bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js',
           'bower_components/jquery-imagerect/dist/js/jquery-imagerect.min.js',
-          'bower_components/bootstrap-colorpicker-plus/dist/js/bootstrap-colorpicker-plus.min.js',
+          'bower_components/bootstrap-colorpicker-plus/dist/js/bootstrap-colorpicker-plus.js',
           'bower_components/bootstrap-shapestyle-dialog/dist/js/bootstrap-ssdlg.min.js',
           'bower_components/jszip/dist/jszip.min.js',
           'bower_components/file-saver.js/FileSaver.js',
