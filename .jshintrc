@@ -21,7 +21,7 @@
     "require": true,
     "uuid":true,
     "jh2d":true,
-    "JSZip":true,
+    "LZMA":true,
     "saveAs":true,
     "jQuery":true,
     "unescape":true,
