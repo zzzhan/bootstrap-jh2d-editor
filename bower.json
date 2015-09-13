@@ -25,10 +25,11 @@
   ],
   "dependencies": {
     "bootstrap-shapestyle-dialog": "https://github.com/zzzhan/bootstrap-shapestyle-dialog.git",
-    "node-uuid": "~1.4.3",
+    "file-saver.js": "~1.20150507.2",
     "jh2d": "https://github.com/zzzhan/jh2d.git",
     "jquery.hotkeys": "https://github.com/jeresig/jquery.hotkeys.git#~0.2.0",
-    "qrcode.js": "https://github.com/davidshimjs/qrcodejs.git",
-    "file-saver.js": "https://github.com/Teleborder/FileSaver.js.git"
+    "lzma": "~2.2.1",
+    "node-uuid": "~1.4.3",
+    "qrcode.js": "qrcode#~1.0.2"
   }
 }
