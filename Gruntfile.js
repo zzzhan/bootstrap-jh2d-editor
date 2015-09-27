@@ -51,7 +51,7 @@ module.exports = function (grunt) {
         src: [
           'tmp/js/jquery.hotkeys.min.js',
           'tmp/js/uuid.min.js',
-          'bower_components/qrcode.js/qrcode.min.js',
+          'bower_components/qrcode.js/qrcode.js',
           'bower_components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js',
           'bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js',
           'bower_components/jquery-imagerect/dist/js/jquery-imagerect.min.js',
@@ -131,13 +131,13 @@ module.exports = function (grunt) {
 			renderer: function(k, v) {
 				if(k==='bootstrap_ssdlg') {
 				  var p = 'bower_components/bootstrap-shapestyle-dialog/dist/tpl/';
-				  var name = 'bootstrap-ssdlg.min.html';
+				  var name = 'bootstrap-ssdlg.html';
 				  switch(this.ctx.dest) {
 				    case 'tmp/index_zh-CN.html':
-					  name = 'bootstrap-ssdlg_zh_cn.min.html';
+					  name = 'bootstrap-ssdlg_zh-CN.html';
 					break;
 				    case 'tmp/index_zh-TW.html':
-					  name = 'bootstrap-ssdlg_zh_tw.min.html';
+					  name = 'bootstrap-ssdlg_zh-TW.html';
 					break;
 				  }
 				  v = grunt.file.read(p+name);
